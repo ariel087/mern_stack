@@ -125,8 +125,10 @@ const connectionDB = async () => {
     }
 };
 
-app.listen(3002, () => {
-    console.log('Listening on port: 3002');
+app.listen(process.env.PORT || 3002, () => {
+    console.log(`Listening on port: ${process.env.PORT || 3002}`);
 });
+
+
 
 connectionDB();
